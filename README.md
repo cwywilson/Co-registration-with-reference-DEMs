@@ -32,6 +32,8 @@ Produces clear elevation change maps, slope masks, residual plots, and histogram
 - Residual error statistics
 - Plots of vertical bias vs terrain features
 
+![Stable Terrain Elevation Analysis](1fig-snpstable.jpg)
+
 ## Acknowledgements
 
 * [XDEM Team](https://github.com/GlacioHack/xdem)
