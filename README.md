@@ -1,26 +1,26 @@
-# DEM Co-Registration and Glacier Change Detection in SNP and ANP
+# DEM Co-Registration and Glacier Change Detection in Auyuittuq and Sirmilik National Parks
 
-This repository contains code and workflows for co-registering historical and modern Digital Elevation Models (DEMs), and computing glacier elevation change and volume change in the Canadian Arctic, particularly in Auyuittuq National Park (ANP) and Sirmilik National Park (SNP).
+This repository provides workflows and code for co-registering historical and modern Digital Elevation Models (DEMs), and for quantifying glacier surface elevation and volume changes in the Canadian Arctic. The focus areas are **Auyuittuq National Park (ANP)** and **Sirmilik National Park (SNP)**, where long-term glacier monitoring is essential for understanding climate-driven cryospheric change.
 
 ## Repository Contents
 
 * **`SNP DEM coregister.ipynb`**
-  This notebook aligns a historical 1958 DEM to a reference ArcticDEM (2022) using the [XDEM](https://github.com/GlacioHack/xdem) library. Steps include:
+This notebook demonstrates the co-registration of a 1958 historical DEM to a reference ArcticDEM mosaic (2022) using the [`xdem`](https://github.com/GlacioHack/xdem) library.  
+Key steps include:
+- Loading and reprojecting input DEMs
+- Handling nodata values and filtering erroneous elevations
+- Visualizing spatial extent and glacier outlines
+- Performing co-registration using bias correction methods
+- Evaluating co-registration performance through residual analysis and plots
 
-  * Reading and reprojecting DEMs
-  * Setting nodata values and cleaning erroneous elevations
-  * Visualizing extent and preparing for co-registration
-  * Performing co-registration 
-  * Evaluating residuals between DEMs before and after alignment
+* **`ANP DEM difference.ipynb`**  
+  This notebook performs elevation differencing between co-registered DEMs to assess glacier surface elevation change from the 1959 historical DEM to the 2021/22 ArcticDEM strip. Key steps include:
 
-* **`ANP DEM difference.ipynb`**
-  This notebook performs elevation differencing between the co-registered DEMs to assess glacier surface change from 1959 to 2021/22. It includes:
-
-  * Reprojection and nodata setup
-  * DEM differencing and masking
-  * Uncertainty estimation
-  * Plotting elevation difference maps
-  * Exporting geotiffs and summary statistics
+  * Reprojecting DEMs and handling nodata values
+  * Applying slope and glacier masks to isolate stable terrain and glacierized areas
+  * Performing DEM co-registration (if needed)
+  * Estimating elevation uncertainty
+  * Visualizing and exporting elevation difference maps
 
 
 ## Acknowledgements
